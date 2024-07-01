@@ -1,0 +1,22 @@
+<div class="sidenav-header">
+    <img [width]="profilePicSize()" [height]="profilePicSize()" src="..\..\assets\images\usuario.png" />
+    <div class="header-text" [class.hide-header-text]="sidenavCollapsed()">
+        <h2>Administrador</h2>
+        <p>Francisco Quiroga</p>
+    </div>
+</div>
+
+<mat-nav-list>
+    <mat-list-item 
+        *ngFor="let item of menuItems()" 
+        [routerLink]="item.route" 
+        routerLinkActive="active"
+        #rla="routerLinkActive"
+        [routerLinkActiveOptions]="{exact:true}">
+        <a>
+            <mat-icon class="icon">{{item.icon}}</mat-icon>
+            <span class="title">{{item.label}}</span>
+        </a>
+    </mat-list-item>
+
+</mat-nav-list>

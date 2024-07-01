@@ -1,0 +1,50 @@
+.sidenav-header{
+    padding-top: 24px;
+    text-align: center;
+    overflow: hidden;
+    > img{
+        border-radius: 100%;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+}
+
+.header-text{
+    > h2 {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    > p {
+        margin: 0;
+        font-size: 0.8rem;
+    }
+}
+
+/* Esconde el texto de la imagen */
+.hide-header-text{
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+}
+
+
+
+.icon{
+    margin: 0 35px 0 5px;
+    color: rgb(130, 130, 130);
+    position: relative;
+    top: 5px;
+}
+
+.title{
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 5px;
+    color: rgb(130, 130, 130);
+}
+
+.active{
+    background-color: rgba(0, 0, 0, 0.1);
+}
