@@ -1,3 +1,9 @@
+
+
+:host *{
+    transition: all 0.5s ease-in-out;
+}
+
 .sidenav-header{
     padding-top: 24px;
     text-align: center;
@@ -10,6 +16,11 @@
 }
 
 .header-text{
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 0.3s, height 0.3s, width 0.3s;
     > h2 {
         margin: 0;
         font-size: 1rem;
@@ -24,9 +35,11 @@
 
 /* Esconde el texto de la imagen */
 .hide-header-text{
+    right: 5%;
     opacity: 0;
-    height: 0px;
+    height: 0px !important;
     width: 0px;
+    overflow: hidden;
 }
 
 
@@ -47,4 +60,14 @@
 
 .active{
     background-color: rgba(0, 0, 0, 0.1);
+    border-left: 7px solid var(--sidenav-color);
 }
+
+.active .title{
+    color: var(--sidenav-color);
+}
+
+.active .icon{
+    color: var(--sidenav-color);
+}
+
